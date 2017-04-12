@@ -11,13 +11,13 @@ export default class NotesCard extends React.Component {
     return (
       <div className="panel panel-default">
         <div class="panel-heading">
-          {note.title}<Button onClick={this.deleteNote.bind(this)} style={{float: 'right', margin: -7}}>X</Button>
+          Title: {note.title}<Button onClick={this.deleteNote.bind(this)} style={{float: 'right', margin: -7}}>X</Button>
         </div>
         <div className="panel-body">
           {note.message}
         </div>
         <div class="panel-footer">
-          {note.tags}
+          Tags: {note.tags.join(', ')}
         </div>
       </div>
     )
